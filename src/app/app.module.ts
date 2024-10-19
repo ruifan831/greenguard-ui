@@ -3,16 +3,56 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
+import { NzFlexModule } from 'ng-zorro-antd/flex';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ServiceComponent } from './pages/service/service.component';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ContactComponent,
+    ProductsComponent,
+    ServiceComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NzGridModule,
+    NzMenuModule,
+    NzLayoutModule,
+    NzFlexModule,
+    NzCarouselModule,
+    NzIconModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    provideAnimationsAsync(),
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

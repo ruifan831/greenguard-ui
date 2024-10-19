@@ -1,0 +1,50 @@
+<div nz-flex nzJustify="space-between">
+  <div class="logo">
+    <img src="assets/logo-transparent.jpg" alt="" />
+  </div>
+  <div class="menu-icon">
+    <span
+      *ngIf="isMenuOpen"
+      (click)="toggleMenu()"
+      nz-icon
+      nzType="menu-unfold"
+      nzTheme="outline"
+    ></span>
+    <span
+      *ngIf="!isMenuOpen"
+      (click)="toggleMenu()"
+      nz-icon
+      nzType="menu-fold"
+      nzTheme="outline"
+    ></span>
+  </div>
+
+  <div *ngIf="!smallScreen">
+    <ng-container *ngTemplateOutlet="menuTemplate"></ng-container>
+  </div>
+</div>
+<div *ngIf="smallScreen">
+  <ng-container *ngTemplateOutlet="menuTemplate"></ng-container>
+</div>
+
+<ng-template #menuTemplate>
+  <ul [ngClass]="{ open: isMenuOpen }" nz-menu [nzMode]="menuMode">
+    <li nz-menu-item routerLink="">Home</li>
+    <li nz-menu-item routerLink="/drones">Drones</li>
+    <li nz-submenu>
+      <span title>
+        <span style="margin-right: 5px">Service</span>
+        <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+      </span>
+      <ul>
+        <li nz-menu-item routerLink="/service/imaging">Imaging</li>
+        <li nz-menu-item routerLink="/service/application">Application</li>
+        <li nz-menu-item routerLink="/service/seeding">Seeding</li>
+        <li nz-menu-item routerLink="/service/rate">Rate</li>
+      </ul>
+    </li>
+
+    <li nz-menu-item routerLink="/about">About</li>
+    <li nz-menu-item routerLink="/contact">Contact</li>
+  </ul>
+</ng-template>

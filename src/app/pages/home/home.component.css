@@ -1,0 +1,22 @@
+[nz-carousel-content] {
+    text-align: center;
+    height: 500px;
+    background: url("/src/assets/DJI_0480-scaled.jpg");
+    color: #fff;
+    overflow: hidden;
+    background-position: top center;
+    background-size: cover;
+}
+.banner {
+    height: 100%;
+}
+
+.img-box img{
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 768px) {
+}
