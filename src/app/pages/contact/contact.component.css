@@ -1,0 +1,19 @@
+.ant-flex {
+    height: 100%;
+}
+
+.contact-page {
+    padding: 1rem 0;
+}
+
+#contact-title {
+    padding-bottom: 1rem;
+}
+
+#number-section, #email-section, #hour-section{
+    margin-bottom: 0.5rem;
+}
+
+#number-section span:first-child, #email-section span:first-child, #hour-section p {
+    margin: 0 0.3rem;
+}

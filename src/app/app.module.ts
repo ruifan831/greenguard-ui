@@ -9,7 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,6 +23,9 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import {ReactiveFormsModule} from '@angular/forms';
 
 registerLocaleData(en);
 
@@ -41,12 +44,16 @@ registerLocaleData(en);
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NzGridModule,
     NzMenuModule,
     NzLayoutModule,
     NzFlexModule,
     NzCarouselModule,
-    NzIconModule
+    NzIconModule,
+    NzFormModule,
+    NzInputModule,
+    HttpClientModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
