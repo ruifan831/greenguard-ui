@@ -4,18 +4,24 @@ body{
 nz-header {
     padding: 0;
     background: #fff;
+    height: 10rem;
 }
 nz-content{
     padding: 0;
-    background-color: #f0f1f2;
+    background: #fff;
+    position: relative;
 }
 
 nz-footer{
-    padding: 0;
-    background:#fff;
+    padding: 1rem 0;
+    background:#272727;
+    color: #fff;
 }
 
 @media screen and (max-width: 576px) {
+    nz-header {
+        height: 5rem;
+    }
     nz-content{
         padding: 0;
     }
