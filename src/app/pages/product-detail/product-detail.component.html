@@ -1,0 +1,54 @@
+<ng-container *ngIf="droneDetail">
+  <div
+    nz-row
+    nzJustify="center"
+    nzAlign="middle"
+    class="product-detail-title-bar"
+  >
+    <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+      <a href="javascript:void(0)">
+        {{ droneDetail.name }}
+      </a>
+    </div>
+  </div>
+  <div nz-row class="product-detail-main">
+    <video
+      #mainVideoElement
+      controls
+      autoplay
+      muted
+      loop
+      style="object-fit: contain"
+    >
+      <source type="video/webm" [src]="droneDetail.main_video_src" />
+    </video>
+  </div>
+  <div
+    nz-row
+    nzJustify="center"
+    class="product-detail-description"
+    [ngClass]="{ dark: isDark }"
+  >
+    <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+      <p [innerHTML]="droneDetail.description"></p>
+    </div>
+  </div>
+  <div nz-row nzJustify="center" [ngClass]="{ dark: isDark }">
+    <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+      <video controls autoplay muted loop #detailVideoElement>
+        <source type="video/webm" [src]="droneDetail.model_detail_video_src" />
+      </video>
+    </div>
+  </div>
+
+  <div nz-row nzJustify="center" [ngClass]="{ dark: isDark }">
+    <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+      <div nz-row [ngClass]="{ dark: isDark }">
+        <div nz-col nzSpan="8" class="feature-card" *ngFor="let feature of droneDetail.features">
+          <p class="feature-title">{{ feature.title }}</p>
+          <p class="feature-detail" [innerHTML]="feature.detail"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

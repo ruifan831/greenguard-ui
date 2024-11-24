@@ -26,6 +26,9 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 registerLocaleData(en);
 
@@ -38,7 +41,9 @@ registerLocaleData(en);
     ContactComponent,
     ProductsComponent,
     ServiceComponent,
-    AboutComponent
+    AboutComponent,
+    ProductCardComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,7 @@ registerLocaleData(en);
     NzIconModule,
     NzFormModule,
     NzInputModule,
+    NzButtonModule,
     HttpClientModule
   ],
   providers: [

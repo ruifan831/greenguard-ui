@@ -19,7 +19,7 @@
         ></span>
       </div>
 
-      <div *ngIf="!smallScreen">
+      <div id="wide-screen-menu" *ngIf="!smallScreen">
         <ng-container *ngTemplateOutlet="menuTemplate"></ng-container>
       </div>
     </div>
@@ -32,7 +32,23 @@
 <ng-template #menuTemplate>
   <ul [ngClass]="{ open: isMenuOpen }" nz-menu [nzMode]="menuMode">
     <li nz-menu-item (click)="onNavigate()" routerLink="">Home</li>
-    <li nz-menu-item (click)="onNavigate()" routerLink="/drones">Drones</li>
+    <li nz-submenu nzTitle="Drones">
+      <ul>
+        <li nz-menu-item (click)="onNavigate()" routerLink="/drones/t50">
+          DJI Agri T50
+        </li>
+      </ul>
+      <ul>
+        <li nz-menu-item (click)="onNavigate()" routerLink="/drones/t25">
+          DJI Agri T25
+        </li>
+      </ul>
+      <ul>
+        <li nz-menu-item (click)="onNavigate()" routerLink="/drones/mavic_3_m">
+          DJI Mavic 3M
+        </li>
+      </ul>
+    </li>
     <li nz-submenu nzTitle="Service">
       <ul>
         <li nz-menu-item (click)="onNavigate()" routerLink="/service/imaging">

@@ -1,19 +1,37 @@
-.ant-flex {
-    height: 100%;
-}
 
-.contact-page {
-    padding: 1rem 0;
-}
 
 #contact-title {
     padding-bottom: 1rem;
 }
 
-#number-section, #email-section, #hour-section{
+#number-section,
+#email-section,
+#hour-section {
     margin-bottom: 0.5rem;
 }
 
-#number-section span:first-child, #email-section span:first-child, #hour-section p {
+#number-section span:first-child,
+#email-section span:first-child,
+#hour-section p {
     margin: 0 0.3rem;
+}
+
+#contact-form h1, #contact-form p {
+    padding: 0.5rem 0;
+}
+#contact-form {
+    text-align: center;
+}
+#contact-form form {
+    margin-top: 0.5rem;
+    text-align: start;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background-color: #ffffff;
+    /* border: 5px solid #ffffff; */
+    /* White border */
+    /* border-radius: 10px; */
+    /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+    /* Shadow effect */
 }

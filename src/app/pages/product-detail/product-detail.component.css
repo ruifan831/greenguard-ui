@@ -1,0 +1,67 @@
+.product-detail-title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    z-index: 800;
+    background-color: rgba(35, 37, 38, .9)
+}
+
+.product-detail-title-bar a {
+    font-size: 14px;
+    line-height: 64px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dark {
+    background-color: black;
+    color: #fff;
+}
+
+.product-detail-description {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.product-detail-description p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -.03em;
+}
+
+video {
+    width: 100%;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+
+.feature-card{
+    padding: 1rem 0;
+}
+.feature-title{
+    font-size: 2rem;
+    letter-spacing: -.03em;
+}
+
+.feature-detail {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: -.03em;
+}
+
+.dark .feature-detail {
+    color: rgba(255, 255, 255, 0.65)
+}

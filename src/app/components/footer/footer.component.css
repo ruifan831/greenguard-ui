@@ -1,5 +1,5 @@
 a {
-    color: #6c7073;
+    color: #fff;
 
 }
 
@@ -37,6 +37,7 @@ a {
 }
 
 .footer-link-container {
+    padding-top: 16px;
     border-bottom: 1px solid #f0f1f2;
     padding-bottom: 16px;
     margin-bottom: 16px !important;
