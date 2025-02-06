@@ -1,0 +1,26 @@
+.coming-soon-container {
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/DJI_0480-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}

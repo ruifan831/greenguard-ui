@@ -29,6 +29,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 
 registerLocaleData(en);
 
@@ -43,7 +44,8 @@ registerLocaleData(en);
     ServiceComponent,
     AboutComponent,
     ProductCardComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,
