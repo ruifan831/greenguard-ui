@@ -1,6 +1,15 @@
-<div class="product-card">
-  <div class="product-card-image">
-    <img src="assets/dji_t_50.webp" alt="" srcset="" />
+<div class="product-card" *ngIf="droneData" [routerLink]="['/drones', model]">
+  <div class="product-image">
+    <img [src]="getImageSource()" [alt]="droneData.name" />
   </div>
-  <div>DJI Mavic 3M</div>
+  <div class="product-info">
+    <h3>{{droneData.name}}</h3>
+    <ul class="feature-list">
+      <li *ngFor="let feature of droneData.features.slice(0, 3)">
+        <span nz-icon nzType="check" nzTheme="outline"></span>
+        {{feature.title}}
+      </li>
+    </ul>
+    <button nz-button nzType="primary">Learn More</button>
+  </div>
 </div>

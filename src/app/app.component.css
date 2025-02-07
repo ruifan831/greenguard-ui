@@ -1,21 +1,24 @@
-body{
-    color: #3b3e40;
+body {
+    color: #0D1B2A;
+    background-color: #E0E1DD;
 }
+
 nz-header {
     padding: 0;
     background: #fff;
     height: 10rem;
 }
-nz-content{
+
+nz-content {
     padding: 0;
-    background: #fff;
+    background: #E0E1DD;
     position: relative;
 }
 
-nz-footer{
+nz-footer {
     padding: 1rem 0;
-    background:#272727;
-    color: #fff;
+    background: #1B263B;
+    color: #E0E1DD;
 }
 
 @media screen and (max-width: 576px) {
@@ -24,8 +27,5 @@ nz-footer{
     }
     nz-content{
         padding: 0;
-    }
-    .ant-layout-header,.ant-layout-content,.ant-layout-footer{
-        padding: 0 1rem;
     }
 }

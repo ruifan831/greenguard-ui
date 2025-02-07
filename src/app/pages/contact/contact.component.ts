@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
       name: [],
       email: [],
       message: [],
+      service: [],
     });
   }
 

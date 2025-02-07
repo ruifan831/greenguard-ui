@@ -1,14 +1,111 @@
 [nz-carousel-content] {
-    text-align: center;
-    height: 500px;
-    background: url("/assets/DJI_0480-scaled.jpg");
-    color: #fff;
-    overflow: hidden;
-    background-position: top center;
-    background-size: cover;
+  text-align: center;
+  height: 50vh;
+
+  color: #fff;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
+
+::ng-deep .ant-carousel .slick-dots {
+  position: absolute;
+  bottom: 2rem;
+}
+
+::ng-deep .ant-carousel .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+::ng-deep .ant-carousel .slick-dots li.slick-active button {
+  width: 24px;
+  border-radius: 6px;
+  background: #fff;
+}
+
 .banner {
-    height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.banner h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideInDown 1s ease forwards;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.banner h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: slideInUp 1s ease 0.3s forwards;
+  color: #f0f0f0;
+}
+
+.banner p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 600px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.6s forwards;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  opacity: 0;
+  animation: fadeIn 1s ease 0.9s forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .img-box img{
@@ -16,7 +113,205 @@
 }
 
 @media screen and (max-width: 576px) {
+  .hero-buttons button {
+    margin: 0.5rem;
+    min-width: 200px;
+  }
+  .services-section,
+  .featured-product,
+  .why-choose-section,
+  .testimonials-section,
+  .cta-section {
+    padding: 4rem 1.5rem !important;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .featured-product {
+    text-align: center;
+  }
+  
+  img {
+    margin-top: 2rem;
+  }
 }
 
-@media screen and (max-width: 768px) {
+.home-container {
+  overflow-x: hidden;
+  background: #f5f5f5;
+}
+
+.carousel-section {
+  background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7)),
+              url('/assets/DJI_0480-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+}
+
+.services-section,
+.featured-product,
+.why-choose-section,
+.testimonials-section {
+  padding: 4rem 0;
+  background: #f5f5f5;
+}
+
+.service-card,
+.feature-card,
+.testimonial-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 27, 42, 0.1);
+}
+
+.service-card:hover,
+.feature-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(13, 27, 42, 0.15);
+}
+
+.section-title {
+  text-align: center;
+  color: #0D1B2A;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-card h3 {
+  color: #0D1B2A !important;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: #415A77;
+  margin: 0;
+}
+
+.service-card span[nz-icon] {
+  font-size: 2.5rem;
+  color: #415A77;
+}
+
+.featured-product h2 {
+  color: #0D1B2A;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.featured-product p {
+  color: #415A77;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #415A77;
+}
+
+.feature-list li span[nz-icon] {
+  margin-right: 1rem;
+  color: #415A77;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.why-choose-section {
+  padding: 4rem 0;
+  background: #f5f5f5;
+}
+
+.testimonial-card span[nz-icon] {
+  font-size: 3rem;
+  color: #415A77;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.testimonial-card .quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #1B263B;
+}
+
+.testimonial-card h4 {
+  font-size: 1.2rem;
+  color: #0D1B2A;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .position {
+  color: #778DA9;
+  margin: 0;
+}
+
+.cta-section {
+  padding: 6rem 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0D1B2A;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #415A77;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-buttons button {
+  height: 48px;
+  padding: 0 2rem;
+  font-size: 1.1rem;
+}
+
+.cta-buttons button[nzType="primary"] {
+  background: #415A77;
+  border: none;
+  color: #fff;
+}
+
+.cta-buttons button[nzType="default"] {
+  background: transparent;
+  border: 2px solid #415A77;
+  color: #415A77;
 }

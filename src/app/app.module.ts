@@ -30,6 +30,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { NewlinePipe } from './pipes/newline.pipe';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 registerLocaleData(en);
 
@@ -45,7 +47,8 @@ registerLocaleData(en);
     AboutComponent,
     ProductCardComponent,
     ProductDetailComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    NewlinePipe
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ registerLocaleData(en);
     NzFormModule,
     NzInputModule,
     NzButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    NzSelectModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },

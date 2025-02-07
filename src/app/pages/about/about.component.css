@@ -1,0 +1,143 @@
+.about-container {
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7)),
+              url('/assets/DJI_0480-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(120deg, #E0E1DD, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.content-section {
+  padding: 4rem 0;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(120deg, #0D1B2A, #415A77);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.services-section, .products-section, .why-us-section {
+  margin-bottom: 4rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+li span[nz-icon] {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  background: linear-gradient(120deg, #415A77, #778DA9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 27, 42, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(13, 27, 42, 0.15);
+}
+
+.feature-card span[nz-icon] {
+  font-size: 2.5rem;
+  background: linear-gradient(120deg, #415A77, #778DA9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, #0D1B2A, #415A77);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.commitment {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section button {
+  background: #415A77;
+  border: none;
+  color: #E0E1DD;
+}
+
+.cta-section button:hover {
+  background: #1B263B;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 2rem 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,1 +1,69 @@
-<p>service works!</p>
+<div class="service-container" *ngIf="currentService">
+  <div class="hero-section">
+    <div nz-row nzJustify="center">
+      <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+        <h1>{{currentService.title}}</h1>
+        <p class="subtitle">{{currentService.subtitle}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div nz-row nzJustify="center">
+      <div nz-col nzXs="24" nzSm="24" nzMd="22" nzLg="20" nzXl="18">
+        <div class="intro">
+          <p>{{currentService.description}}</p>
+        </div>
+
+        <div class="how-it-works">
+          <h2><span nz-icon nzType="deployment-unit" nzTheme="outline"></span> How It Works</h2>
+          <p [innerHTML]="currentService.howItWorks | newline"></p>
+        </div>
+
+        <div class="features-section">
+          <h2><span nz-icon [nzType]="currentService.icon" nzTheme="outline"></span> Key Features & Benefits</h2>
+          <div class="feature-cards" nz-row [nzGutter]="[24, 24]">
+            <div nz-col nzXs="24" nzSm="24" nzMd="12" *ngFor="let feature of currentService.features">
+              <div class="feature-card">
+                <h3>{{feature.title}}</h3>
+                <p class="description">{{feature.description}}</p>
+                <ul class="benefits">
+                  <li *ngFor="let benefit of feature.benefits">
+                    <span nz-icon nzType="check-circle" nzTheme="outline"></span>
+                    {{benefit}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="best-for-section">
+          <h2><span nz-icon nzType="team" nzTheme="outline"></span> Best For</h2>
+          <ul>
+            <li *ngFor="let item of currentService.bestFor">
+              <span nz-icon nzType="check" nzTheme="outline"></span>
+              {{item}}
+            </li>
+          </ul>
+        </div>
+
+        <div class="why-choose-section">
+          <h2><span nz-icon nzType="trophy" nzTheme="outline"></span> Why Choose GreenGuard Drone</h2>
+          <ul>
+            <li *ngFor="let item of currentService.whyChooseUs">
+              <span nz-icon nzType="check" nzTheme="outline"></span>
+              {{item}}
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta-section">
+          <h2>Ready to Get Started?</h2>
+          <p>Contact us to learn more about our {{currentService.title}} services</p>
+          <button nz-button nzType="primary" routerLink="/contact">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
