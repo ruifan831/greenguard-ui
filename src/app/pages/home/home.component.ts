@@ -17,5 +17,21 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   array = [1, 2, 3, 4];
-
+  services = [
+    {
+      icon: 'dashboard',
+      title: 'Drone Crop Monitoring',
+      description: 'Advanced multispectral imaging for real-time crop health analysis'
+    },
+    {
+      icon: 'experiment',
+      title: 'Precision Spraying & Spreading',
+      description: 'Efficient pesticide, fertilizer, and seed application with minimal waste'
+    },
+    {
+      icon: 'environment',
+      title: 'Aerial Mapping & Surveying',
+      description: 'High-accuracy mapping for optimized farm planning and soil analysis'
+    }
+  ];
 }

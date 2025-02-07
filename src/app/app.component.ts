@@ -12,10 +12,5 @@ export class AppComponent {
   shouldShowFullLayout = true;
 
   constructor(private router: Router) {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: any) => {
-      this.shouldShowFullLayout = event.url !== '/';
-    });
   }
 }

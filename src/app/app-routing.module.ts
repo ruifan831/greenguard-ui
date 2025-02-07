@@ -14,7 +14,11 @@ const routes: Routes = [
     component:ProductDetailComponent
   },
   {
-    path:'service/:category',
+    path:'drones',
+    component: ProductsComponent
+  },
+  {
+    path:'service/:serviceType',
     component: ServiceComponent
   },
   {
@@ -27,7 +31,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    component: ComingSoonComponent
+    component: HomeComponent
   },
 ];
 
